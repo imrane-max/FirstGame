@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/imeges/tilemap_packed.png" type="Texture" id=1]
+[ext_resource path="res://scriptcs/player/Player.gd" type="Script" id=2]
+[ext_resource path="res://assets/sounds/jump.mp3" type="AudioStream" id=3]
+[ext_resource path="res://assets/sounds/deid.mp3" type="AudioStream" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 8, 8 )
+
+[node name="Player" type="KinematicBody2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 17, 129, 15, 16 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( -9.09495e-13, 0 )
+current = true
+zoom = Vector2( 0.23, 0.23 )
+limit_left = 1
+limit_right = 500
+limit_bottom = 600
+limit_smoothed = true
+smoothing_enabled = true
+
+[node name="Jump" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="spawn" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = 7.086

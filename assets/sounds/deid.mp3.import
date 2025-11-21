@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/deid.mp3-c59fdac65a3af66e7fe8ba91ef45657a.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/deid.mp3"
+dest_files=[ "res://.import/deid.mp3-c59fdac65a3af66e7fe8ba91ef45657a.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
